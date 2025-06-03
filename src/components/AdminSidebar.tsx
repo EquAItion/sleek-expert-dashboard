@@ -47,7 +47,7 @@ export function AdminSidebar() {
   const isActive = (path: string) => currentPath === path;
 
   return (
-    <Sidebar className={`border-r border-gray-200 bg-gradient-to-b from-slate-50 to-slate-100 ${collapsed ? "w-16" : "w-64"}`}>
+    <Sidebar className={`border-r border-gray-300 bg-slate-800 ${collapsed ? "w-16" : "w-64"}`}>
       <SidebarContent className="p-4">
         <div className={`mb-8 ${collapsed ? "text-center" : ""}`}>
           <div className="flex items-center gap-3">
@@ -56,15 +56,15 @@ export function AdminSidebar() {
             </div>
             {!collapsed && (
               <div>
-                <h1 className="text-xl font-bold text-gray-900">AdminPro</h1>
-                <p className="text-xs text-gray-500">Expert Platform</p>
+                <h1 className="text-xl font-bold text-white">AdminPro</h1>
+                <p className="text-xs text-gray-300">Expert Platform</p>
               </div>
             )}
           </div>
         </div>
 
         <SidebarGroup>
-          <SidebarGroupLabel className={`text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 ${collapsed ? "text-center" : ""}`}>
+          <SidebarGroupLabel className={`text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3 ${collapsed ? "text-center" : ""}`}>
             {!collapsed && "Navigation"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -78,7 +78,7 @@ export function AdminSidebar() {
                         `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                           isActive 
                             ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg transform scale-105" 
-                            : "text-gray-700 hover:bg-white hover:shadow-md hover:text-blue-600"
+                            : "text-gray-300 hover:bg-slate-700 hover:text-white"
                         }`
                       }
                     >
@@ -94,7 +94,7 @@ export function AdminSidebar() {
 
         <div className="mt-auto pt-8">
           <SidebarMenuButton asChild>
-            <button className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-600 hover:bg-red-50 transition-all duration-200 w-full ${collapsed ? "justify-center" : ""}`}>
+            <button className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-400 hover:bg-red-900/20 hover:text-red-300 transition-all duration-200 w-full ${collapsed ? "justify-center" : ""}`}>
               <LogOut className="w-5 h-5" />
               {!collapsed && <span className="font-medium">Logout</span>}
             </button>
