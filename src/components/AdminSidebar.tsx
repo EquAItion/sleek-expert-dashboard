@@ -64,7 +64,7 @@ export function AdminSidebar() {
         </div>
 
         <SidebarGroup>
-          <SidebarGroupLabel className={`text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3 ${collapsed ? "text-center" : ""}`}>
+          <SidebarGroupLabel className={`text-xs font-semibold text-gray-200 uppercase tracking-wider mb-3 ${collapsed ? "text-center" : ""}`}>
             {!collapsed && "Navigation"}
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -78,7 +78,7 @@ export function AdminSidebar() {
                         `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                           isActive 
                             ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg transform scale-105" 
-                            : "text-gray-300 hover:bg-slate-700 hover:text-white"
+                            : "text-gray-100 hover:bg-slate-700 hover:text-white"
                         }`
                       }
                     >
@@ -94,7 +94,7 @@ export function AdminSidebar() {
 
         <div className="mt-auto pt-8">
           <SidebarMenuButton asChild>
-            <button className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-400 hover:bg-red-900/20 hover:text-red-300 transition-all duration-200 w-full ${collapsed ? "justify-center" : ""}`}>
+            <button className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-300 hover:bg-red-900/20 hover:text-red-200 transition-all duration-200 w-full ${collapsed ? "justify-center" : ""}`}>
               <LogOut className="w-5 h-5" />
               {!collapsed && <span className="font-medium">Logout</span>}
             </button>
